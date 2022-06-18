@@ -50,9 +50,8 @@ jobs:
           builder: ${{ steps.buildx.outputs.name }}
           push: false
           load: true
-          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/docker-gs-ping:latest, \
-            ${{ github.repository }}:latest
-          cache-from: type=local, src=/tmp/.buildx-cache
+          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/docker-gs-ping:latest, ${{ github.repository }}:latest
+          cache-from: type=local,src=/tmp/.buildx-cache
           cache-to: type=local,dest=/tmp/.buildx-cache
 
       - name: Image digest
