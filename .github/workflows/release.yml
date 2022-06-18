@@ -50,7 +50,7 @@ jobs:
           builder: ${{ steps.buildx.outputs.name }}
           push: false
           load: true
-          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/docker-gs-ping:latest, ${{ github.repository }}:latest
+          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/docker-gs-ping:latest, kazukimaehara/go-ci-cd:latest
           cache-from: type=local,src=/tmp/.buildx-cache
           cache-to: type=local,dest=/tmp/.buildx-cache
 
