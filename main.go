@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"net/http"
 	"os"
 
@@ -28,6 +29,7 @@ func main() {
 		httpPort = "8080"
 	}
 
+	fmt.Println("Server starts.")
 	e.Logger.Fatal(e.Start(":" + httpPort))
 }
 
